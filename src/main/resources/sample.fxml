@@ -1,8 +1,368 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="Application.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainVbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller">
+    <children>
+        <Label fx:id="articleCate" alignment="CENTER" prefHeight="94.0" prefWidth="1200.0" text="CATEGORY">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Button mnemonicParsing="false" onAction="#change" text="Show">
+            <font>
+                <Font size="33.0" />
+            </font>
+        </Button>
+        <ScrollPane fx:id="mainScrollPane" prefHeight="666.0" prefWidth="1200.0">
+            <content>
+                <VBox fx:id="subVbox" alignment="TOP_CENTER" prefHeight="1970.0" prefWidth="1197.0">
+                    <children>
+                        <GridPane fx:id="GP" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                        </GridPane>
+                        <GridPane fx:id="GP1" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle1" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview1" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg1" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP2" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle2" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview2" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg2" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP3" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle3" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview3" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg3" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP4" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle4" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview4" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg4" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP5" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle5" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview5" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg5" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP6" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle6" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview6" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg6" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP7" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle7" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview7" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg7" fitHeight="194.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP8" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle8" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview8" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg8" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                        <GridPane fx:id="GP9" alignment="CENTER" maxWidth="1000.0" prefHeight="205.0" prefWidth="1000.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.33514404296875" minWidth="10.0" prefWidth="264.2714538574219" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="735.7285461425781" minWidth="10.0" prefWidth="735.7285461425781" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="80.03395080566406" minHeight="10.0" prefHeight="74.15234375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="120.83024597167969" minHeight="10.0" prefHeight="99.34765625" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="articleTitle9" alignment="BOTTOM_LEFT" prefHeight="67.0" prefWidth="677.0" text="Title">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="articlePreview9" alignment="TOP_LEFT" prefHeight="82.0" prefWidth="675.0" text="Previews" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <ImageView fx:id="articleImg9" fitHeight="194.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>
